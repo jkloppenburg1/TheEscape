@@ -187,6 +187,7 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
 
 
         // TODO: Then move the zombie, using the player's row and column position.
+        // Move the zombie no matter what
         zombie.move(gameBoard, player.getCol(), player.getRow());
         zombieImageView.setX(zombie.getCol() * SQUARE + OFFSET);
         zombieImageView.setY(zombie.getRow() * SQUARE + OFFSET);
@@ -220,9 +221,6 @@ public class GameActivity extends Activity implements GestureDetector.OnGestureL
             playerImageView.setX(player.getCol() * SQUARE + OFFSET);
             playerImageView.setY(player.getRow() * SQUARE + OFFSET);
         }
-        // Move the zombie no matter what
-
-
 
 
         if (player.getRow() == exitRow && player.getCol() == exitCol)
